@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/dob.css" />
+    <link rel="stylesheet" href="css/frthRow.css" />
+    <link rel="stylesheet" href="css/family_details.css" />
+    <link rel="stylesheet" href="css/abroad_details.css" />
+    <link rel="stylesheet" href="css/addressDetails.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="myForm" action="" method="post" autocomplete="off">
+      <h1 align="center">Register</h1>
+
+      <div style="text-align: center">
+        <span class="step" id="step-1">1</span>
+        <span class="step" id="step-2">2</span>
+        <span class="step" id="step-3">3</span>
+        <span class="step" id="step-4">4</span>
+        <span class="step" id="step-5">5</span>
+        <span class="step" id="step-6">6</span>
+        <span class="step" id="step-7">7</span>
+      </div>
+
+      <div class="tab" id="tab-1">
+        <h2>Personal Details</h2>
+        <!--first row-->
+        <div class="abroad-form-row my-3">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">First Name:*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="first_name"
+                name="first_name"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Middle Name:</span>
+              <input
+                type="text"
+                class="form-control"
+                name="middle_name"
+                id="middle_name"
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Last Name*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="last_name"
+                name="last_name"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <!--second row-->
+        <div class="abroad-form-row my-3">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Mobile No:*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="mobile"
+                name="mobile"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Email:*</span>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                id="email"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Last Name*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="last_name"
+                name="last_name"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <!--Third row-->
+        <div class="abroad-form-row my-3">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <label for="dob_ad">Date Of Birth B.S.*:</label>
+              <input
+                type="date"
+                id="dob_bs"
+                name="dob_bs"
+                class="large-date-picker"
+              />
+            </label>
+          </div>
+
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <label for="dob_ad">Date Of Birth A.D.*:</label>
+              <input
+                type="date"
+                id="dob_ad"
+                name="dob_ad"
+                class="large-date-picker"
+              />
+            </label>
+          </div>
+        </div>
+        <!--Fourth row-->
+        <div class="form-date my-4">
+          <label for="gender">Gender:</label>
+          <div class="radio-container">
+            <div class="radio-container">
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality" class="large-select">
+              <option value="option1">Nepali</option>
+              <option value="option2">Foreign</option>
+            </select>
+          </div>
+        </div>
+
+        <!--Fifth row-->
+        <div class="abroad-form-row my-3">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Citizenship No:*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="ctzn_no"
+                name="ctzn_no"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Citizenship Issued From:</span>
+              <select
+                class="form-control"
+                name="ctzn-issued"
+                id="ctzn_issued"
+                required
+              >
+                <option value="">Select District</option>
+                <option value="ktm">Kathmandu</option>
+                <option value="bkt">Bhaktapur</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <!--sixth row-->
+
+        <div class="form-date my-4">
+          <div class="form-field">
+            <label for="name">Citizenship Issuded Date B.S.*:</label>
+            <input
+              type="date"
+              id="dob_bs"
+              name="dob_bs"
+              class="large-date-picker"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="dob_ad">Citizenship Issuded Date A.D.*:</label>
+            <input
+              type="date"
+              id="dob_ad"
+              name="dob_ad"
+              class="large-date-picker"
+            />
+          </div>
+        </div>
+        <!--seventh row-->
+        <div class="abroad-form-row my-3">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Passport No:</span>
+              <input
+                type="text"
+                class="form-control"
+                id="passport_no"
+                name="passport_no"
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Passport Issued From:</span>
+              <select
+                class="form-control"
+                name="passport_issued_from"
+                id="passport_issued_from"
+              >
+                <option value="">Select Issuing Country</option>
+                <option value="country1">Country 1</option>
+                <option value="country2">Country 2</option>
+                <option value="country3">Country 3</option>
+                <!-- Add more options as needed -->
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Passport Issued Date:</span>
+              <input
+                type="date"
+                class="form-control"
+                id="passport_issued_date"
+                name="passport_issued_date"
+              />
+            </label>
+          </div>
+        </div>
+
+        <!--Eigth row-->
+
+        <div class="abroad-form-row my-3">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Passport Expiry Date:</span>
+              <input
+                type="date"
+                class="form-control"
+                id="passport_expiry_date"
+                name="passport_expiry_date"
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Beneficiary No:*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="demat_no"
+                name="demat_no"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">PAN No:</span>
+              <input
+                type="text"
+                class="form-control"
+                id="pan_no"
+                name="pan_no"
+              />
+            </label>
+          </div>
+        </div>
+        <!-- Family Details-->
+        <div>
+          <h3>Family Details</h3>
+
+          <!-- FD first row-->
+          <div class="abroad-form-row my-3">
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">Grandfather's Name:*</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="granfather_name"
+                  name="grandfather_name"
+                  required
+                />
+              </label>
+            </div>
+            <div class="abroad-form-holder abroad-form-holder-2">
+              <label class="form-row-inner">
+                <span class="label">Father's Name:</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="father_name"
+                  id="father_name"
+                  required
+                />
+              </label>
+            </div>
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">Mother's Name*</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mother_name"
+                  name="mother_name"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+
+          <!-- FD second row-->
+
+          <div class="marital-status">
+            <label for="married">Marital status?</label>
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="unmarried"
+                name="marital-status"
+                value="unmarried"
+                onclick="toggleInputFields()"
+              />
+              <label for="unmarried">Unmarried</label>
+              <input
+                type="radio"
+                id="married"
+                name="marital-status"
+                value="married"
+                onclick="toggleInputFields()"
+              />
+              <label for="married">Married</label>
+              <input
+                type="radio"
+                id="other"
+                name="marital-status"
+                value="other"
+                onclick="toggleInputFields()"
+              />
+              <label for="other">Other</label>
+            </div>
+          </div>
+
+          <div id="spouse-details" style="display: none">
+            <h3>Spouse Details:</h3>
+            <div class="abroad-form-row my-3">
+              <div class="abroad-form-holder">
+                <label class="form-row-inner">
+                  <span class="label">Spouse's Name:*</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="spouse_name"
+                    name="spouse_name"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="abroad-form-holder abroad-form-holder-2">
+                <label class="form-row-inner">
+                  <span class="label">Father-in-law's Name:*</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="fatherinlaw_name"
+                    id="fatherinlaw_name"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="abroad-form-holder">
+                <label class="form-row-inner">
+                  <span class="label">Mother-in-law's Name:*</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="motherinlaw_name"
+                    name="motherinlaw_name"
+                    required
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div class="abroad-form-row my-3">
+              <div class="abroad-form-holder">
+                <label class="form-row-inner">
+                  <span class="label">Son's Name:*</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="son_name"
+                    name="son_name"
+                    required
+                  />
+                </label>
+              </div>
+
+              <div class="abroad-form-holder">
+                <label class="form-row-inner">
+                  <span class="label">Daughter's Name*</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="daughter-name"
+                    name="daughter_name"
+                    required
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="abroad-form-row my-3">
+            <div class="abroad-form-holder">
+              <label>Is Minor?</label>
+              <div class="radio-container">
+                <input type="radio" id="yes" name="answer" value="yes" />
+                <label for="yes">Yes</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" id="no" name="answer" value="no" />
+                <label for="no">No</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" id="other" name="answer" value="other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+        <div class="button-container">
+          <div class="index-btn" onclick="run(1, 2);">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-2">
+        <h2>Abroad Residence Details</h2>
+        <!-- First Row -->
+        <div class="form-date my-4">
+          <div id="radio-container-abroad">
+            <label>Are you Non Resident Nepalese?*:</label>
+            <div class="radio-options-abroad">
+              <input
+                type="radio"
+                name="nrn"
+                value="yes"
+                checked
+                class="radio-1"
+                onclick="showDetails()"
+              />
+              <label for="">Yes</label>
+              <input
+                type="radio"
+                name="nrn"
+                value="no"
+                onclick="hideDetails()"
+              />
+              <label for="">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="abroad-form-row my-4" id="secondRow">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">NRN Code No.*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="nrn_code"
+                name="nrn_code"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">City*</span>
+              <input
+                type="text"
+                class="form-control"
+                name="city"
+                id="city"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Province*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="province"
+                name="province"
+                required
+              />
+            </label>
+          </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="abroad-form-row my-4" id="thirdRow">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Country*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                name="country"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">NRN Company</span>
+              <input
+                type="text"
+                class="form-control"
+                name="nrn_company"
+                id="nrn_company"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Designation*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="designation"
+                name="designation"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <br /><br />
+
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="run(2, 1);">Previous</div>
+          <div class="index-btn" onclick="run(2, 3);">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-3">
+        <h2>Address Details</h2>
+        <!-- First Row -->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Country*</span>
+              <select class="form-control" id="country" name="country" required>
+                <option value="Nepal">Nepal</option>
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Province*</span>
+              <select
+                class="form-control"
+                name="perm_province"
+                id="perm_province"
+                required
+              >
+                <option value="">Select Province</option>
+                <option value="Province 1">Province 1</option>
+                <option value="Province 2">Province 2</option>
+                <option value="Bagmati Province">Bagmati Province</option>
+                <option value="Gandaki Province">Gandaki Province</option>
+                <option value="Lumbini Province">Lumbini Province</option>
+                <option value="Karnali Province">Karnali Province</option>
+                <option value="Sudurpashchim Province">
+                  Sudurpashchim Province
+                </option>
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">District*</span>
+              <select
+                class="form-control"
+                id="perm_district"
+                name="perm_istrict"
+                required
+              >
+                <option value="">Select District</option>
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Pokhara">Pokhara</option>
+                <option value="Biratnagar">Biratnagar</option>
+                <option value="Bharatpur">Bharatpur</option>
+                <option value="Butwal">Butwal</option>
+                <option value="Dhangadhi">Dhangadhi</option>
+                <option value="Nepalgunj">Nepalgunj</option>
+                <option value="Hetauda">Hetauda</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <!--Second Row-->
+
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Municipality*</span>
+              <div class="dropdown">
+                <select
+                  class="form-control dropdown-toggle"
+                  id="perm_municipality"
+                  name="perm_municipality"
+                  required
+                >
+                  <option value="">
+                    Select Municipality<i class="fas fa-chevron-down"></i>
+                  </option>
+                  <option value="ktm">Kathmandu</option>
+                  <option value="pkr">Pokhara</option>
+                  <option value="brt">Biratnagar</option>
+                  <option value="bht">Bharatpur</option>
+                  <option value="btl">Butwal</option>
+                  <option value="dhn">Dhangadhi</option>
+                  <option value="ngj">Nepalgunj</option>
+                  <option value="htd">Hetauda</option>
+                  <option value="jan">Janakpur</option>
+                  <option value="lt">Lalitpur</option>
+                  <option value="pty">Patan</option>
+                  <option value="bir">Birgunj</option>
+                  <option value="dhm">Dhankuta</option>
+                </select>
+              </div>
+            </label>
+          </div>
+
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Ward_No*</span>
+              <input
+                type="text"
+                class="form-control"
+                name="perm_ward_No"
+                id="perm_ward_No"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Street/Tole*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="perm_tole"
+                name="perm_tole"
+                required
+              />
+            </label>
+          </div>
+        </div>
+
+        <!--Third Row-->
+
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Phone number*</span>
+              <input
+                class="form-control"
+                name="perm_phone_number"
+                id="perm_phone_number"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Fax*</span>
+              <input
+                class="form-control"
+                id="perm_fax"
+                name="perm_fax"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <!--Fourth Row-->
+        <div class="form-date my-4">
+          <div id="radio-container-abroad">
+            <label>Is temporary address same as permanent?*:</label>
+            <div class="radio-options-abroad">
+              <input
+                type="radio"
+                name="nrn"
+                value="yes"
+                checked
+                class="radio-1"
+                onclick="toggleAddressFields(false)"
+              />
+              <label for="">Yes</label>
+              <input
+                type="radio"
+                name="nrn"
+                value="no"
+                onclick="toggleAddressFields(true)"
+              />
+              <label for="">No</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="additional-fields" style="display: none">
+          <!-- First Row -->
+          <div class="abroad-form-row my-4">
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">Country*</span>
+                <select
+                  class="form-control"
+                  id="country"
+                  name="country"
+                  required
+                >
+                  <option value="Nepal">Nepal</option>
+                </select>
+              </label>
+            </div>
+            <div class="abroad-form-holder abroad-form-holder-2">
+              <label class="form-row-inner">
+                <span class="label">Province*</span>
+                <select
+                  class="form-control"
+                  name="perm_province"
+                  id="perm_province"
+                  required
+                >
+                  <option value="">Select Province</option>
+                  <option value="Province 1">Province 1</option>
+                  <option value="Province 2">Province 2</option>
+                  <option value="Bagmati Province">Bagmati Province</option>
+                  <option value="Gandaki Province">Gandaki Province</option>
+                  <option value="Lumbini Province">Lumbini Province</option>
+                  <option value="Karnali Province">Karnali Province</option>
+                  <option value="Sudurpashchim Province">
+                    Sudurpashchim Province
+                  </option>
+                </select>
+              </label>
+            </div>
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">District*</span>
+                <select
+                  class="form-control"
+                  id="perm_district"
+                  name="perm_istrict"
+                  required
+                >
+                  <option value="">Select District</option>
+                  <option value="Kathmandu">Kathmandu</option>
+                  <option value="Pokhara">Pokhara</option>
+                  <option value="Biratnagar">Biratnagar</option>
+                  <option value="Bharatpur">Bharatpur</option>
+                  <option value="Butwal">Butwal</option>
+                  <option value="Dhangadhi">Dhangadhi</option>
+                  <option value="Nepalgunj">Nepalgunj</option>
+                  <option value="Hetauda">Hetauda</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <!--Second Row-->
+
+          <div class="abroad-form-row my-4">
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">Municipality*</span>
+                <div class="dropdown">
+                  <select
+                    class="form-control dropdown-toggle"
+                    id="perm_municipality"
+                    name="perm_municipality"
+                    required
+                  >
+                    <option value="">
+                      Select Municipality<i class="fas fa-chevron-down"></i>
+                    </option>
+                    <option value="ktm">Kathmandu</option>
+                    <option value="pkr">Pokhara</option>
+                    <option value="brt">Biratnagar</option>
+                    <option value="bht">Bharatpur</option>
+                    <option value="btl">Butwal</option>
+                    <option value="dhn">Dhangadhi</option>
+                    <option value="ngj">Nepalgunj</option>
+                    <option value="htd">Hetauda</option>
+                    <option value="jan">Janakpur</option>
+                    <option value="lt">Lalitpur</option>
+                    <option value="pty">Patan</option>
+                    <option value="bir">Birgunj</option>
+                    <option value="dhm">Dhankuta</option>
+                  </select>
+                </div>
+              </label>
+            </div>
+
+            <div class="abroad-form-holder abroad-form-holder-2">
+              <label class="form-row-inner">
+                <span class="label">Ward_No*</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="perm_ward_No"
+                  id="perm_ward_No"
+                  required
+                />
+              </label>
+            </div>
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">Street/Tole*</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="perm_tole"
+                  name="perm_tole"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+
+          <!--Third Row-->
+
+          <div class="abroad-form-row my-4">
+            <div class="abroad-form-holder abroad-form-holder-2">
+              <label class="form-row-inner">
+                <span class="label">Phone number*</span>
+                <input
+                  class="form-control"
+                  name="perm_phone_number"
+                  id="perm_phone_number"
+                  required
+                />
+              </label>
+            </div>
+            <div class="abroad-form-holder">
+              <label class="form-row-inner">
+                <span class="label">Fax*</span>
+                <input
+                  class="form-control"
+                  id="perm_fax"
+                  name="perm_fax"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="run(3, 2);">Previous</div>
+          <div class="index-btn" onclick="run(3, 4);">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-4">
+        <h2>Bank Details</h2>
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Type of Account*</span>
+              <select
+                class="form-control"
+                id="account_type"
+                name="account_type"
+                required
+              >
+                <option value="">Select an account type</option>
+                <option value="Savings">Savings</option>
+                <option value="Checking">Checking</option>
+                <option value="Business">Business</option>
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Name of Bank*:</span>
+              <select
+                class="form-control"
+                id="bank_name"
+                name="bank_name"
+                required
+              >
+                <option value="">Select a bank</option>
+                <option value="Bank A">Bank A</option>
+                <option value="Bank B">Bank B</option>
+                <option value="Bank C">Bank C</option>
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Account No:*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="account_no"
+                name="account_no"
+                required
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Branch Address*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="branch_address"
+                name="branch_address"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <br /><br />
+
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="run(4, 3);">Previous</div>
+          <div class="index-btn" onclick="run(4, 5);">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-5">
+        <h3>Occupation Details:</h3>
+        <!--First Row-->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Occupation*</span>
+              <select
+                class="form-control"
+                id="occupation"
+                name="occupation"
+                required
+              >
+                <option value="">Select an occupation</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Doctor">Doctor</option>
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Types of Business*:</span>
+              <select
+                class="form-control"
+                id="business_type"
+                name="business_type"
+                required
+              >
+                <option value="">Select a business type</option>
+                <option value="Retail">Retail</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Technology">Technology</option>
+              </select>
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">PAN No:*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="pan_number"
+                name="pan_number"
+                required
+              />
+            </label>
+          </div>
+        </div>
+
+        <!--Second Row-->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Organization Name</span>
+              <input
+                type="text"
+                class="form-control"
+                id="organization_name"
+                name="organization_name"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Address</span>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                name="address"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Designation:</span>
+              <select
+                class="form-control"
+                id="designation"
+                name="designation"
+                required
+              >
+                <option value="">Select a designation</option>
+                <option value="Manager">Manager</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Salesperson">Salesperson</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <!--Third Row-->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">ID No. of Employee</span>
+              <input
+                type="text"
+                class="form-control"
+                id="employee_id"
+                name="employee_id"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Financial Details:</span>
+              <select
+                class="form-control"
+                id="financial_details"
+                name="financial_details"
+                required
+              >
+                <option value="">Select financial details</option>
+                <option value="Up to 60,000">Up to 60,000</option>
+                <option value="Up to 70,000">Up to 70,000</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <!--Fourth Row-->
+
+        <!-- First Row -->
+        <div class="abroad-form-row">
+          <div id="radio">
+            <label
+              >Involved In Investment Companies Which Are established for
+              Securities Trading?*:</label
+            >
+            <input
+              type="radio"
+              name="involved"
+              value="yes"
+              checked
+              class="radio-1"
+              style="margin-right: 10px"
+              onclick="showDetailsOccupation()"
+            />
+            Yes
+            <input
+              type="radio"
+              name="involved"
+              value="no"
+              style="margin-left: 50px"
+              onclick="hideDetailsOccupation()"
+            />
+            No
+          </div>
+        </div>
+        <div class="abroad-form-row my-4" id="secondRowOccupation">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Name Of Company*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="companyName"
+                name="companyName"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Designation*</span>
+              <div class="dropdown">
+                <select
+                  class="form-control"
+                  name="designation"
+                  id="designation"
+                  required
+                >
+                  <option value="">Select Designation</option>
+                  <option value="Manager">Manager</option>
+                  <option value="Supervisor">Supervisor</option>
+                  <option value="Executive">Executive</option>
+                  <!-- Add more options as needed -->
+                </select>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="run(5, 4);">Previous</div>
+          <div class="index-btn" onclick="run(5, 6);">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-6">
+        <h3>Money Laundering Prevention</h3>
+
+        <!--First Row-->
+        <div>
+          <label>Are you a politician or High Ranking Officer?*</label>
+          <div class="radio-buttons-address">
+            <input type="radio" id="yes" name="radioGroup" value="yes" />
+            <label for="yes">Yes</label>
+
+            <input type="radio" id="no" name="radioGroup" value="no" />
+            <label for="no">No</label>
+          </div>
+        </div>
+
+        <!-- Second  Row -->
+        <div class="abroad-form-row">
+          <div id="radio">
+            <label
+              >Are You Related To A Politician Or a High Ranking
+              Official?*:</label
+            >
+            <input
+              type="radio"
+              name="related"
+              value="yes"
+              checked
+              class="radio-1"
+              style="margin-right: 10px"
+              onclick="showDetailsHighRank()"
+            />
+            Yes
+            <input
+              type="radio"
+              name="related"
+              value="no"
+              style="margin-left: 50px"
+              onclick="hideDetailsHighRank()"
+            />
+            No
+          </div>
+        </div>
+        <div class="abroad-form-row my-4" id="secondRowHighRank">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Name Of Politician or Official*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="officialName"
+                name="officialName"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Relationship*</span>
+              <div class="dropdown">
+                <select
+                  class="form-control"
+                  name="relationship"
+                  id="relationship"
+                  required
+                >
+                  <option value="">Select Relationship</option>
+                  <option value="father">father</option>
+                  <option value="mother">mother</option>
+                  <option value="uncle">uncle</option>
+                </select>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!--Third Row-->
+        <div class="abroad-form-row">
+          <div id="radio">
+            <label>Do you have a Beneficiary?*:</label>
+            <input
+              type="radio"
+              name="beneficiary"
+              value="yes"
+              checked
+              class="radio-1"
+              style="margin-right: 10px"
+              onclick="showDetailsBeneficiary()"
+            />
+            Yes
+            <input
+              type="radio"
+              name="beneficiary"
+              value="no"
+              style="margin-left: 50px"
+              onclick="hideDetailsBeneficiary()"
+            />
+            No
+          </div>
+        </div>
+        <div class="abroad-form-row my-4" id="thirdRowBeneficiary">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Beneficiary Name*</span>
+              <input
+                type="text"
+                class="form-control"
+                id="beneficiaryName"
+                name="beneficiaryName"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Relationship*</span>
+              <div class="dropdown">
+                <select
+                  class="form-control"
+                  name="relationship"
+                  id="relationship"
+                  required
+                >
+                  <option value="">Select Relationship</option>
+                  <option value="father">father</option>
+                  <option value="mother">mother</option>
+                  <option value="uncle">uncle</option>
+                </select>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!--Fourth Row-->
+
+        <div class="abroad-form-row">
+          <div id="radio">
+            <label>Have You Been Convicted of Felony in Past?*:</label>
+            <input
+              type="radio"
+              name="felony"
+              value="yes"
+              checked
+              class="radio-1"
+              style="margin-right: 10px"
+              onclick="showDetailsFelony()"
+            />
+            Yes
+            <input
+              type="radio"
+              name="felony"
+              value="no"
+              style="margin-left: 50px"
+              onclick="hideDetailsFelony()"
+            />
+            No
+          </div>
+        </div>
+        <div class="abroad-form-row my-4" id="fourthRowFelony">
+          <label class="form-row-inner">
+            <span class="label"
+              >Offenses as per clause of section 2 of Money Laundering
+              Prevention Act, 2064*</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="offenceName"
+              name="offenceName"
+              required
+            />
+          </label>
+        </div>
+        <br /><br />
+
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="run(6, 5);">Previous</div>
+          <div class="index-btn" onclick="run(6, 7);">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-7">
+        <h2>Documentation Details</h2>
+        <h3>Documents Uploads</h3>
+
+        <!--First Row-->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">PP Size Photo*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="pp_size_photo"
+                name="pp_size_photo"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Citizenship Front Photo*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="citizenship_front_photo"
+                name="citizenship_front_photo"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Citizenship Back Photo*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="citizenship_back_photo"
+                name="citizenship_back_photo"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+        </div>
+
+        <!--Second Row-->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Right Thumbprint*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="right_thumbprint"
+                name="right_thumbprint"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder abroad-form-holder-2">
+            <label class="form-row-inner">
+              <span class="label">Left Thumbprint*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="left_thumbprint"
+                name="left_thumbprint"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Signature*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="signature"
+                name="signature"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+        </div>
+
+        <!--Third Row-->
+        <div class="abroad-form-row my-4">
+          <div class="abroad-form-holder">
+            <label class="form-row-inner">
+              <span class="label">Location Map*:</span>
+              <input
+                type="file"
+                class="form-control"
+                id="location_map"
+                name="location_map"
+                accept="image/*"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <br /><br />
+
+        <div class="index-btn" onclick="run(7, 6);">Previous</div>
+        <button
+          class="index-btn"
+          type="submit"
+          name="submit"
+          style="background: blue"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <!--<script>
+      // Default tab
+      $(".tab").css("display", "none");
+      $("#tab-1").css("display", "block");
+
+      function run(hideTab, showTab) {
+        if (hideTab < showTab) {
+          // If not press previous button
+          // Validation if press next button
+          var currentTab = 0;
+          x = $("#tab-" + hideTab);
+          y = $(x).find("input[required]");
+          for (i = 0; i < y.length; i++) {
+            if (y[i].value == "") {
+              $(y[i]).css("background", "#ffdddd");
+              return false;
+            }
+          }
+        }
+
+        // Progress bar
+        for (i = 1; i < showTab; i++) {
+          $("#step-" + i).css("opacity", "1");
+        }
+
+        // Switch tab
+        $("#tab-" + hideTab).css("display", "none");
+        $("#tab-" + showTab).css("display", "block");
+        $("input").css("background", "#fff");
+      }
+    </script> -->
+    <script>
+      // Default tab
+      $(".tab").css("display", "none");
+      $("#tab-1").css("display", "block");
+
+      function run(hideTab, showTab) {
+        // Progress bar
+        for (i = 1; i < showTab; i++) {
+          $("#step-" + i).css("opacity", "1");
+        }
+
+        // Switch tab
+        $("#tab-" + hideTab).css("display", "none");
+        $("#tab-" + showTab).css("display", "block");
+      }
+    </script>
+    <script src="js/addressdetails.js"></script>
+    <script src="js/moneylaunder.js"></script>
+    <script src="js/personaldetails.js"></script>
+  </body>
+</html>
